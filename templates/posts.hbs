@@ -1,8 +1,32 @@
 
 
+
+    <div class="img-slider">
+{{#if imageOneShowing}}
+  <button class="btn btn-primary caros" {{action 'showImageFour'}}>Prev</button>
+  <button class="btn btn-primary caros" {{action 'showImageTwo'}}>Next</button>
+  <img class="img-responsive" src="assets/hoc.png">
+{{/if}}
+{{#if imageTwoShowing}}
+  <button class="btn btn-primary caros" {{action 'showImageOne'}}>Prev</button>
+  <button class="btn btn-primary caros" {{action 'showImageThree'}}>Next</button>
+  <img class="img-responsive" src="assets/bball.png">
+{{/if}}
+{{#if imageThreeShowing}}
+<button class="btn btn-primary caros" {{action 'showImageTwo'}}>Prev</button>
+<button class="btn btn-primary caros" {{action 'showImageFour'}}>Next</button>
+  <img class="img-responsive" src="assets/boehner.png">
+{{/if}}
+{{#if imageFourShowing}}
+<button class="btn btn-primary caros" {{action 'showImageThree'}}>Prev</button>
+<button class="btn btn-primary caros" {{action 'showImageOne'}}>Next</button>
+  <img class="img-responsive" src="assets/oil.png">
+{{/if}}
+</div>
+
+
 <div class="row">
   <div class="col-sm-6">
-
     <p>{{#link-to 'hocStory'}}<img class="img-responsive" src="assets/hoc.png">{{/link-to}}</p>
     <h4>Catching Up On 2 Seasons Of ‘House Of Cards’ Depressingly Manageable</h4>
   </div>
@@ -21,25 +45,3 @@
     <h4>Lucrative New Oil Extraction Method Involves Drilling Directly Into Gas Stations</h4>
   </div>
 </div>
-
-
-{{#if imageOneShowing}}
-  <button class="btn btn-primary" {{action 'showImageFour'}}>Prev</button>
-  <button class="btn btn-primary" {{action 'showImageTwo'}}>Next</button>
-  <img class="img-responsive" src="assets/hoc.png">
-{{/if}}
-{{#if imageTwoShowing}}
-  <button class="btn btn-primary" {{action 'showImageOne'}}>Prev</button>
-  <button class="btn btn-primary" {{action 'showImageThree'}}>Next</button>
-  <img class="img-responsive" src="assets/bball.png">
-{{/if}}
-{{#if imageThreeShowing}}
-<button class="btn btn-primary" {{action 'showImageTwo'}}>Prev</button>
-<button class="btn btn-primary" {{action 'showImageFour'}}>Next</button>
-  <img class="img-responsive" src="assets/boehner.png">
-{{/if}}
-{{#if imageFourShowing}}
-<button class="btn btn-primary" {{action 'showImageThree'}}>Prev</button>
-<button class="btn btn-primary" {{action 'showImageOne'}}>Next</button>
-  <img class="img-responsive" src="assets/oil.png">
-{{/if}}
